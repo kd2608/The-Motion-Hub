@@ -4,77 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Motion Hub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #005a8d; color: white; text-align: center; padding: 20px; font-size: 24px; font-weight: bold; }
-        .container { width: 80%; margin: auto; padding: 20px; }
-        .hero { text-align: center; padding: 60px 20px; background: #007bb5; color: white; border-radius: 10px; }
-        .hero h2 { font-size: 36px; }
-        .hero p { font-size: 18px; }
-        .btn { display: inline-block; padding: 12px 24px; background: #ff9800; color: white; text-decoration: none; border-radius: 5px; font-size: 18px; transition: 0.3s; }
-        .btn:hover { background: #e68900; }
-        .section { padding: 40px 0; border-bottom: 1px solid #ddd; background: white; border-radius: 10px; margin: 20px 0; padding: 20px; }
-        h2 { color: #005a8d; }
-        ul { list-style-type: none; padding: 0; }
-        li { padding: 8px 0; }
-        form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-        button { padding: 12px; background: #005a8d; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; }
-        button:hover { background: #00426b; }
+        body { font-family: 'Arial', sans-serif; background: #f8f9fa; }
+        .navbar { background: #005a8d; }
+        .navbar-brand, .nav-link { color: white !important; }
+        .hero { text-align: center; padding: 80px 20px; background: url('https://source.unsplash.com/1600x900/?physiotherapy') no-repeat center center/cover; color: white; }
+        .hero h1 { font-size: 48px; font-weight: bold; }
+        .hero p { font-size: 20px; }
+        .btn-primary { background: #ff9800; border: none; }
+        .btn-primary:hover { background: #e68900; }
+        .section { padding: 60px 20px; }
+        footer { background: #005a8d; color: white; text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>The Motion Hub</h1>
-        <p>Sports Injury and Orthopaedic Rehabilitation</p>
-    </header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">The Motion Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
-    <div class="container">
-        <div class="hero">
-            <h2>Move Better, Feel Better</h2>
+    <div class="hero">
+        <div class="container">
+            <h1>Move Better, Feel Better</h1>
             <p>Expert physiotherapy for sports injuries and orthopaedic rehabilitation.</p>
-            <a href="#appointment" class="btn">Book an Appointment</a>
-        </div>
-
-        <div class="section" id="about">
-            <h2>About Us</h2>
-            <p>We provide expert physiotherapy services to help you recover from injuries and improve mobility.</p>
-        </div>
-
-        <div class="section" id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Sports Injury Treatment</li>
-                <li>Orthopaedic Rehabilitation</li>
-                <li>Post-Surgery Recovery</li>
-                <li>Personalized Therapy Plans</li>
-            </ul>
-        </div>
-
-        <div class="section" id="appointment">
-            <h2>Book an Appointment</h2>
-            <p>Schedule a session with our expert physiotherapists.</p>
-            <a href="#" class="btn">Schedule Now</a>
-        </div>
-
-        <div class="section" id="testimonials">
-            <h2>What Our Clients Say</h2>
-            <p>"The Motion Hub helped me recover quickly from my sports injury! Highly recommend." – John D.</p>
-        </div>
-
-        <div class="section" id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required><br>
-                <input type="email" placeholder="Your Email" required><br>
-                <textarea placeholder="Your Message" required></textarea><br>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <div class="section" id="blog">
-            <h2>Latest Blog Posts</h2>
-            <p>Coming soon! Stay tuned for injury prevention tips and rehab exercises.</p>
+            <a href="#appointment" class="btn btn-primary btn-lg">Book an Appointment</a>
         </div>
     </div>
+    
+    <div class="container section" id="about">
+        <h2 class="text-center">About Us</h2>
+        <p class="text-center">We provide expert physiotherapy services to help you recover from injuries and improve mobility.</p>
+    </div>
+    
+    <div class="container section" id="services">
+        <h2 class="text-center">Our Services</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Sports Injury Treatment</li>
+            <li class="list-group-item">Orthopaedic Rehabilitation</li>
+            <li class="list-group-item">Post-Surgery Recovery</li>
+            <li class="list-group-item">Personalized Therapy Plans</li>
+        </ul>
+    </div>
+    
+    <div class="container section text-center" id="appointment">
+        <h2>Book an Appointment</h2>
+        <p>Schedule a session with our expert physiotherapists.</p>
+        <a href="#" class="btn btn-primary btn-lg">Schedule Now</a>
+    </div>
+    
+    <div class="container section" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 The Motion Hub. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
